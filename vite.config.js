@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-
-
-
+  
+  // المهم: علشان الصور والروترات تشتغل بعد الرفع
+  base: './',
 
   server: {
     proxy: {
@@ -17,12 +17,5 @@ export default defineConfig({
         rewrite: path => path.replace(/^\/api/, '')
       }
     }
-  
-}
-
-
-
-
-
-
+  }
 })
